@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunting phone API</title>
+    <!-- daisyUI cdn link start-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI cdn link end -->
+  </head>
+  <body>
+    <header>
+      <h1 class="text-6xl text-center text-green-500">Hunting Phone</h1>
+    </header>
+    <main class="container mx-auto mt-10">
+      <section>
+        <div class="mb-3">
+          <input
+            id="input-field"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered w-full max-w-xs"
+          />
+
+          <button onclick="getSearchValue()" class="btn btn-accent">
+            Search
+          </button>
+        </div>
+        <!-- another input field and button
+        <div>
+          <input
+            id="input-field-2"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered input-success w-full max-w-xs"
+          />
+          <button onclick="getInputValue()" class="btn btn-outline btn-success">
+            Success
+          </button>
+        </div> -->
+      </section>
+      <!-- search result -->
+      <section>
+        <!-- spinner or loader start here -->
+        <div id="loading-spinner" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-success"></span>
+        </div>
+        <!-- spinner or loader end here -->
+        <div
+          id="phone-container"
+          class="my-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+        <!-- show all button -->
+        <div id="show-all-container" class="hidden text-center">
+          <button onclick="handleShowAll()" class="btn btn-outline btn-success">Show All</button>
+        </div>
+      </section>
+      <!-- search result end  here -->
+    </main>
+    <footer></footer>
+    <script src="js/phone.js"></script>
+  </body>
+</html>
