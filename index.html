@@ -57,10 +57,31 @@
         ></div>
         <!-- show all button -->
         <div id="show-all-container" class="hidden text-center">
-          <button onclick="handleShowAll()" class="btn btn-outline btn-success">Show All</button>
+          <button onclick="handleShowAll()" class="btn btn-outline btn-success">
+            Show All
+          </button>
         </div>
       </section>
       <!-- search result end  here -->
+
+      <!-- showing detaisl modal star here -->
+      <!-- Open the modal using ID.showModal() method -->
+     
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 id="show-detail-phone-name" class="text-lg font-bold"></h3>
+         <div id="show-detail-container">
+
+         </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- showing detaisl modal end here -->
     </main>
     <footer></footer>
     <script src="js/phone.js"></script>
